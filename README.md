@@ -24,4 +24,4 @@ It uses **AI (Google Gemini)** to simplify complex text and displays it in a **d
 ## ▶️ Run Locally
 ```bash
 pip install -r requirements.txt
-streamlit run readease_final_clean.py
+streamlit run readease_streamlit.py
