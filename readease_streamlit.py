@@ -8,18 +8,13 @@ from openai import OpenAI
 # Download NLTK data
 nltk.download('punkt', quiet=True)
 
-# --- Gemini API Key (Loaded from Streamlit Secrets) ---
-# IMPORTANT: This key must be securely stored in your Streamlit secrets file (secrets.toml)
-# or set in the Streamlit Cloud dashboard environment variables.
 try:
-    # Use st.secrets to load the key securely from the environment
-    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+        GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 except KeyError:
     st.error("Error: GEMINI_API_KEY not found in Streamlit secrets.")
     st.info("Please set the GEMINI_API_KEY in your local `secrets.toml` file or Streamlit Cloud settings.")
     st.stop()
     
-# Initialize the OpenAI client pointing to the Gemini API endpoint
 client = OpenAI(api_key=GEMINI_API_KEY, base_url="https://generativelanguage.googleapis.com/v1beta/openai/")
 
 # --- Dyslexia-friendly font setup ---
@@ -161,3 +156,4 @@ if simplified:
 
 st.markdown("---")
 st.caption("Powered by Gemini")
+
