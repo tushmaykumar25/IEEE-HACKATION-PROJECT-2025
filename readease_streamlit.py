@@ -130,4 +130,5 @@ if simplified:
             st.experimental_rerun()
 
 st.markdown("---")
-st.caption("Made with ❤️ for IEEE 'Tech for All' Accessibility Challenge | Theme: AI for Humanity 🌍")
+st.caption("Powered by Gemini")
+
